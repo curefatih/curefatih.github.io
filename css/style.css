@@ -190,13 +190,6 @@ nav {
     }
 }
 
-@media (max-height: 400px) {
-    #top {
-        flex-direction: unset;
-    }
-}
-
-
 @media (max-width: 768px) {
     #contact,
     #main,
