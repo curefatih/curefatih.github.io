@@ -1,3 +1,3 @@
-# curefatih.github.io
+# Personal portfolio & blog
 
-Personal page
+Created with [NEXT](https://nextjs.org/)
