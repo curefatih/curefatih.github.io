@@ -1,0 +1,29 @@
+.head {
+  font-size: 2em;
+  font-weight: 100;
+  padding: 100px 0 20px 0;
+}
+
+.head span {
+  font-weight: 900;
+}
+
+.blogNavigation {
+  margin: 30px 0;
+}
+
+.blogNavigation ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.blogNavigation ul li {
+  margin-right: 10px;
+}
+
+.content{
+  padding: 100px 0;
+}
