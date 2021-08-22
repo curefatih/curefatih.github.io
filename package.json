@@ -11,7 +11,7 @@
     "flexiblegs-css": "^5.6.0",
     "gray-matter": "^4.0.2",
     "marked": "^2.0.1",
-    "next": "10.0.7",
+    "next": "11.1.0",
     "react": "17.0.1",
     "react-dom": "17.0.1",
     "react-feather": "^2.0.9"
