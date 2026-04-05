@@ -300,17 +300,64 @@ body.project-appstore {
   justify-content: center;
 }
 
-.project-device img,
-.project-device video {
+.project-device .project-gallery-item {
+  appearance: none;
+  -webkit-appearance: none;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  cursor: pointer;
+  position: relative;
+  background: var(--bg-deep);
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  border-radius: inherit;
+}
+
+.project-gallery-item:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  z-index: 1;
+}
+
+.project-gallery-item img,
+.project-gallery-item .project-gallery-poster-img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
   object-position: center;
+  pointer-events: none;
 }
 
-.project-device video {
-  background: var(--bg-deep);
+.project-gallery-play {
+  position: absolute;
+  inset: 0;
+  width: 3.35rem;
+  height: 3.35rem;
+  margin: auto;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--bg-deep) 50%, transparent);
+  border: 2px solid color-mix(in srgb, var(--accent) 70%, transparent);
+  box-shadow: 0 6px 28px rgba(0, 0, 0, 0.45);
+  pointer-events: none;
+}
+
+.project-gallery-play::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(calc(-50% + 2px), -50%);
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0.5rem 0 0.5rem 0.85rem;
+  border-color: transparent transparent transparent var(--accent);
 }
 
 .project-shot-caption {
@@ -362,4 +409,311 @@ body.project-appstore {
   font-size: 0.8rem;
   color: var(--text-muted);
   text-align: center;
+}
+
+/* Hero icon opens single image in lightbox */
+.project-icon-wrap .project-zoom-trigger {
+  cursor: zoom-in;
+}
+
+.project-icon-wrap .project-zoom-trigger:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+/* Image lightbox */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.project-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+.project-lightbox[hidden] {
+  display: none !important;
+}
+
+.project-lightbox.is-open {
+  animation: project-lb-fade-in 0.22s ease-out;
+}
+
+@keyframes project-lb-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project-lightbox.is-open {
+    animation: none;
+  }
+}
+
+.project-lightbox-backdrop {
+  position: absolute;
+  inset: 0;
+  /* Fallback when backdrop-filter is unsupported */
+  background: color-mix(in srgb, var(--bg-deep) 82%, transparent);
+  cursor: zoom-out;
+}
+
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  .project-lightbox-backdrop {
+    background: color-mix(in srgb, var(--bg-deep) 22%, transparent);
+    backdrop-filter: blur(28px) saturate(1.15);
+    -webkit-backdrop-filter: blur(28px) saturate(1.15);
+  }
+}
+
+.project-lightbox-dialog {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  max-width: min(96vw, 1100px);
+  max-height: min(92vh, 900px);
+  width: 100%;
+  background: var(--bg-panel);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: var(--project-radius-xl);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.55);
+  overflow: hidden;
+}
+
+.project-lightbox-chrome {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  border-bottom: 1px solid var(--border);
+  flex-shrink: 0;
+}
+
+.project-lightbox-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.project-lightbox-tool {
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  min-width: 2.25rem;
+  min-height: 2.25rem;
+  padding: 0 0.5rem;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg-deep) 55%, transparent);
+  color: var(--text);
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.project-lightbox-tool-wide {
+  font-size: 0.8rem;
+  font-weight: 600;
+  min-width: auto;
+  padding: 0 0.65rem;
+}
+
+.project-lightbox-tool:hover,
+.project-lightbox-tool:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  outline: none;
+}
+
+.project-lightbox-zoom-pct {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  min-width: 3.25rem;
+  text-align: center;
+}
+
+.project-lightbox-close {
+  font-family: var(--font-sans);
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1;
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--bg-deep) 55%, transparent);
+  color: var(--text-muted);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.project-lightbox-close:hover,
+.project-lightbox-close:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+  outline: none;
+}
+
+.project-lightbox-viewport {
+  position: relative;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  align-items: stretch;
+  gap: 0.35rem;
+  padding: 0 0.15rem;
+}
+
+.project-lightbox-viewport .project-lightbox-stage {
+  flex: 1;
+  min-width: 0;
+}
+
+.project-lightbox-fab {
+  flex-shrink: 0;
+  align-self: center;
+  width: 2.35rem;
+  min-height: 2.75rem;
+  padding: 0;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: color-mix(in srgb, var(--bg-deep) 55%, transparent);
+  color: var(--text-muted);
+  font-size: 1.65rem;
+  line-height: 1;
+  font-weight: 400;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.project-lightbox-fab:hover:not(:disabled),
+.project-lightbox-fab:focus-visible:not(:disabled) {
+  border-color: var(--accent);
+  color: var(--accent);
+  outline: none;
+}
+
+.project-lightbox-fab:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.project-lightbox-stage {
+  position: relative;
+  flex: 1;
+  min-height: min(52vh, 420px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  touch-action: none;
+  cursor: default;
+}
+
+.project-lightbox-stage.is-pannable {
+  cursor: grab;
+}
+
+.project-lightbox-stage.is-dragging {
+  cursor: grabbing;
+}
+
+.project-lightbox-pan {
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.project-lightbox--video .project-lightbox-pan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  will-change: auto;
+}
+
+.project-lightbox-img {
+  display: block;
+  max-width: min(90vw, 100%);
+  max-height: min(65vh, 620px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.project-lightbox-img[hidden] {
+  display: none !important;
+}
+
+.project-lightbox-video {
+  display: block;
+  max-width: min(92vw, 100%);
+  max-height: min(62vh, 600px);
+  width: auto;
+  height: auto;
+  background: #000;
+}
+
+.project-lightbox-video[hidden] {
+  display: none !important;
+}
+
+.project-lightbox-counter {
+  margin: 0;
+  padding: 0.35rem 1rem 0.15rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+.project-lightbox-counter[hidden] {
+  display: none !important;
+}
+
+.project-lightbox-caption {
+  flex-shrink: 0;
+  margin: 0;
+  padding: 0.65rem 1rem 0.85rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-align: center;
+  border-top: 1px solid var(--border);
+}
+
+.project-lightbox-caption:empty,
+.project-lightbox-caption[hidden] {
+  display: none;
 }

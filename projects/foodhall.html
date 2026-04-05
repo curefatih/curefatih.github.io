@@ -31,10 +31,13 @@
       <header class="project-hero">
         <div class="project-icon-wrap">
           <img
+            class="project-zoom-trigger"
             src="../assets/foodhall/basket.jpeg"
             width="118"
             height="118"
             alt="Foodhall — basket and ordering"
+            data-caption="Foodhall — basket and ordering"
+            tabindex="0"
           />
         </div>
         <div class="project-hero-copy">
@@ -60,103 +63,167 @@
           Real-time updates, menu paths, and tap-to-pay moments captured in
           product footage and UI stills.
         </p>
-        <ul class="project-scroller">
+        <ul class="project-scroller" data-project-gallery>
           <li class="project-shot">
             <figure>
-            <div class="project-device">
-              <video
-                src="../assets/foodhall/menu_order.mp4"
-                controls
-                playsinline
-                muted
-                loop
-                preload="metadata"
-                poster="../assets/foodhall/basket.jpeg"
-              >
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <figcaption class="project-shot-caption">
-              Menu browse and order flow
-            </figcaption>
+              <div class="project-device">
+                <button
+                  type="button"
+                  class="project-gallery-item project-gallery-item--video"
+                  data-gallery-type="video"
+                  data-gallery-src="../assets/foodhall/menu_order.mp4"
+                  data-gallery-poster="../assets/foodhall/basket.jpeg"
+                  data-gallery-caption="Menu browse and order flow"
+                  aria-label="Open video: Menu browse and order flow"
+                >
+                  <img
+                    class="project-gallery-poster-img"
+                    src="../assets/foodhall/basket.jpeg"
+                    width="780"
+                    height="1688"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-gallery-play" aria-hidden="true"></span>
+                </button>
+              </div>
+              <figcaption class="project-shot-caption">
+                Menu browse and order flow
+              </figcaption>
             </figure>
           </li>
           <li class="project-shot">
             <figure>
-            <div class="project-device">
-              <video
-                src="../assets/foodhall/realtime.mp4"
-                controls
-                playsinline
-                muted
-                loop
-                preload="metadata"
-                poster="../assets/foodhall/staff.jpeg"
-              >
-                Your browser does not support the video tag.
-              </video>
-            </div>
-            <figcaption class="project-shot-caption">
-              Live hall and realtime activity
-            </figcaption>
+              <div class="project-device">
+                <button
+                  type="button"
+                  class="project-gallery-item project-gallery-item--video"
+                  data-gallery-type="video"
+                  data-gallery-src="../assets/foodhall/realtime.mp4"
+                  data-gallery-poster="../assets/foodhall/staff.jpeg"
+                  data-gallery-caption="Live hall and realtime activity"
+                  aria-label="Open video: Live hall and realtime activity"
+                >
+                  <img
+                    class="project-gallery-poster-img"
+                    src="../assets/foodhall/staff.jpeg"
+                    width="780"
+                    height="1688"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-gallery-play" aria-hidden="true"></span>
+                </button>
+              </div>
+              <figcaption class="project-shot-caption">
+                Live hall and realtime activity
+              </figcaption>
             </figure>
           </li>
           <li class="project-shot">
             <figure>
-            <div class="project-device">
-              <img
-                src="../assets/foodhall/qr.jpeg"
-                width="780"
-                height="1688"
-                alt="QR code screen for checkout or table ordering"
-                loading="lazy"
-              />
-            </div>
-            <figcaption class="project-shot-caption">QR checkout</figcaption>
+              <div class="project-device">
+                <button
+                  type="button"
+                  class="project-gallery-item"
+                  data-gallery-type="image"
+                  data-gallery-src="../assets/foodhall/qr.jpeg"
+                  data-gallery-alt="QR code screen for checkout or table ordering"
+                  data-gallery-caption="QR checkout"
+                  aria-label="Open image: QR checkout"
+                >
+                  <img
+                    src="../assets/foodhall/qr.jpeg"
+                    width="780"
+                    height="1688"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+              </div>
+              <figcaption class="project-shot-caption">QR checkout</figcaption>
             </figure>
           </li>
           <li class="project-shot">
             <figure>
-            <div class="project-device">
-              <img
-                src="../assets/foodhall/upload.jpeg"
-                width="780"
-                height="1688"
-                alt="Upload or catalog management"
-                loading="lazy"
-              />
-            </div>
-            <figcaption class="project-shot-caption">Catalog &amp; uploads</figcaption>
+              <div class="project-device">
+                <button
+                  type="button"
+                  class="project-gallery-item"
+                  data-gallery-type="image"
+                  data-gallery-src="../assets/foodhall/upload.jpeg"
+                  data-gallery-alt="Upload or catalog management"
+                  data-gallery-caption="Catalog &amp; uploads"
+                  aria-label="Open image: Catalog and uploads"
+                >
+                  <img
+                    src="../assets/foodhall/upload.jpeg"
+                    width="780"
+                    height="1688"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+              </div>
+              <figcaption class="project-shot-caption">
+                Catalog &amp; uploads
+              </figcaption>
             </figure>
           </li>
           <li class="project-shot">
             <figure>
-            <div class="project-device">
-              <img
-                src="../assets/foodhall/staff.jpeg"
-                width="780"
-                height="1688"
-                alt="Staff-facing tools"
-                loading="lazy"
-              />
-            </div>
-            <figcaption class="project-shot-caption">Staff tools</figcaption>
+              <div class="project-device">
+                <button
+                  type="button"
+                  class="project-gallery-item"
+                  data-gallery-type="image"
+                  data-gallery-src="../assets/foodhall/staff.jpeg"
+                  data-gallery-alt="Staff-facing tools"
+                  data-gallery-caption="Staff tools"
+                  aria-label="Open image: Staff tools"
+                >
+                  <img
+                    src="../assets/foodhall/staff.jpeg"
+                    width="780"
+                    height="1688"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+              </div>
+              <figcaption class="project-shot-caption">Staff tools</figcaption>
             </figure>
           </li>
           <li class="project-shot">
             <figure>
-            <div class="project-device">
-              <img
-                src="../assets/foodhall/screen_resolutions.jpeg"
-                width="780"
-                height="1688"
-                alt="Responsive layouts across screen sizes"
-                loading="lazy"
-              />
-            </div>
-            <figcaption class="project-shot-caption">
-              Layouts across resolutions
-            </figcaption>
+              <div class="project-device">
+                <button
+                  type="button"
+                  class="project-gallery-item"
+                  data-gallery-type="image"
+                  data-gallery-src="../assets/foodhall/screen_resolutions.jpeg"
+                  data-gallery-alt="Responsive layouts across screen sizes"
+                  data-gallery-caption="Layouts across resolutions"
+                  aria-label="Open image: Layouts across resolutions"
+                >
+                  <img
+                    src="../assets/foodhall/screen_resolutions.jpeg"
+                    width="780"
+                    height="1688"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                </button>
+              </div>
+              <figcaption class="project-shot-caption">
+                Layouts across resolutions
+              </figcaption>
             </figure>
           </li>
         </ul>
@@ -245,8 +312,126 @@
       </footer>
     </article>
 
+    <div
+      id="project-lightbox"
+      class="project-lightbox"
+      hidden
+      aria-hidden="true"
+    >
+      <div
+        class="project-lightbox-backdrop"
+        data-lightbox-close
+        aria-hidden="true"
+      ></div>
+      <div
+        class="project-lightbox-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="lightbox-heading"
+        aria-describedby="lightbox-caption"
+      >
+        <h2 id="lightbox-heading" class="visually-hidden">Media preview</h2>
+        <div class="project-lightbox-chrome">
+          <div
+            class="project-lightbox-toolbar"
+            role="toolbar"
+            aria-label="Zoom"
+            data-lightbox-zoom-toolbar
+          >
+            <button
+              type="button"
+              class="project-lightbox-tool"
+              data-zoom-out
+              aria-label="Zoom out"
+            >
+              −
+            </button>
+            <span class="project-lightbox-zoom-pct" aria-live="polite"
+              >100%</span
+            >
+            <button
+              type="button"
+              class="project-lightbox-tool"
+              data-zoom-in
+              aria-label="Zoom in"
+            >
+              +
+            </button>
+            <button
+              type="button"
+              class="project-lightbox-tool project-lightbox-tool-wide"
+              data-zoom-reset
+              aria-label="Reset zoom and position"
+            >
+              Reset
+            </button>
+          </div>
+          <button
+            type="button"
+            class="project-lightbox-close"
+            data-lightbox-close
+            aria-label="Close preview"
+          >
+            ×
+          </button>
+        </div>
+        <div class="project-lightbox-viewport">
+          <button
+            type="button"
+            class="project-lightbox-fab project-lightbox-fab-prev"
+            data-gallery-prev
+            aria-label="Previous item"
+            hidden
+          >
+            ‹
+          </button>
+          <div
+            class="project-lightbox-stage"
+            data-lightbox-stage
+            aria-label="Preview"
+          >
+            <div class="project-lightbox-pan" data-lightbox-pan>
+              <img
+                class="project-lightbox-img"
+                data-lightbox-img
+                alt=""
+                draggable="false"
+              />
+              <video
+                class="project-lightbox-video"
+                data-lightbox-video
+                controls
+                playsinline
+                preload="metadata"
+                hidden
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="project-lightbox-fab project-lightbox-fab-next"
+            data-gallery-next
+            aria-label="Next item"
+            hidden
+          >
+            ›
+          </button>
+        </div>
+        <p
+          class="project-lightbox-counter"
+          data-lightbox-counter
+          aria-live="polite"
+          hidden
+        ></p>
+        <p id="lightbox-caption" class="project-lightbox-caption"></p>
+      </div>
+    </div>
+
     <script>
       document.getElementById("y").textContent = new Date().getFullYear();
     </script>
+    <script src="project-lightbox.js" defer></script>
   </body>
 </html>
