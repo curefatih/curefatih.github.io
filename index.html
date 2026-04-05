@@ -1,72 +1,313 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fatih Cüre's Well Animated Portfolio Page</title>
+    <meta
+      name="description"
+      content="Fatih Cüre — Software Engineer. Backend, microservices, ML in production, Kotlin, Python, Node.js."
+    />
+    <meta name="theme-color" content="#0a0e14" />
+    <title>Fatih Cüre · Software Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
-  <style>
-    body {
-      background-color: #34495e;
-      color: #ecf0f1;
-      padding: 10px;
-    }
-    ul {
-      margin-left: 20px;
-      list-style: square;
-    }
-    ul li {
-      margin-bottom: 5px;
-    }
-  </style>
   <body>
-    Hey! <br />
-    I'm Fatih.
-    <hr />
-    <ul>
-      <li>
-        <h3>Who I am?</h3>
-        <p>A few bit.</p>
-      </li>
-      <li>
-        <h3>What is your tech stack?</h3>
-        <p>Anything that I can learn.</p>
-      </li>
-      <li>
-        <h3>What is your degree?</h3>
-        <p>
-          I don't know right now but I hope it will be "Muasır Medeniyet
-          Seviyesi."
+    <canvas id="bg-canvas" aria-hidden="true"></canvas>
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <div class="wrap">
+      <header class="hero">
+        <p class="hero-badge">Software Engineer</p>
+        <h1>Fatih Cüre</h1>
+        <p class="hero-sub">
+          Backend, scalable microservices, and ML systems in production.
         </p>
-      </li>
-      <li>
-        <h3>Do you have any references?</h3>
-        <p>I have if you count my parents.</p>
-      </li>
-      <li>
-        <h3>Any portfolio?</h3>
-        <p>I tried some but I don't really think that helps you.</p>
-      </li>
-      <li>
-        <h3>Any other questions?</h3>
-        <p>
-          There is a black hole that is called GIT. You can create
+        <nav class="hero-links" aria-label="Primary">
           <a
-            href="https://github.com/curefatih/curefatih.github.io/issues/new"
+            href="https://www.linkedin.com/in/fatih-cure/"
+            rel="noopener noreferrer"
             target="_blank"
-            >an issue</a
+            >LinkedIn</a
+          >
+          <a
+            href="https://github.com/curefatih"
+            rel="noopener noreferrer"
+            target="_blank"
+            >GitHub</a
+          >
+        </nav>
+      </header>
+
+      <main id="main">
+        <section aria-labelledby="summary-heading">
+          <h2 id="summary-heading">Summary</h2>
+          <p class="summary">
+            Dedicated software engineer with <strong>over four years</strong> of
+            experience designing, building, and maintaining production systems.
+            I focus on <strong>scalable microservices</strong>, backend
+            platforms, and <strong>shipping ML models</strong> safely to users.
+            Comfortable across <strong>Node.js</strong>,
+            <strong>Kotlin</strong>, and <strong>Python</strong>, with hands-on
+            work using Spring Boot, Django, Kafka, NoSQL, Docker, and modern
+            CI/CD. I care about real-time experiences, clear team interfaces,
+            and steady improvement of how we build software.
+          </p>
+        </section>
+
+        <section aria-labelledby="experience-heading">
+          <h2 id="experience-heading">Experience</h2>
+
+          <article class="card">
+            <div class="card-header">
+              <h3 class="card-title">
+                <a
+                  href="https://www.udemy.com/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Udemy</a
+                >
+              </h3>
+              <span class="card-meta">Sep 2022 — Present</span>
+            </div>
+            <p class="card-location">Remote</p>
+
+            <ul class="company-timeline" aria-label="Roles at Udemy">
+              <li>
+                <span class="timeline-axis" aria-hidden="true"></span>
+                <div class="timeline-body">
+                  <div class="timeline-head">
+                    <span class="role-title"
+                      >Staff Software Engineer (IC4)</span
+                    >
+                    <span class="card-meta">Mar 2026 — Present</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <span class="timeline-axis" aria-hidden="true"></span>
+                <div class="timeline-body">
+                  <div class="timeline-head">
+                    <span class="role-title"
+                      >Senior Software Engineer (IC3)</span
+                    >
+                    <span class="card-meta">Apr 2025 — Mar 2026</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <span class="timeline-axis" aria-hidden="true"></span>
+                <div class="timeline-body">
+                  <div class="timeline-head">
+                    <span class="role-title">Software Engineer (IC2)</span>
+                    <span class="card-meta">Mar 2023 — Mar 2025</span>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <span class="timeline-axis" aria-hidden="true"></span>
+                <div class="timeline-body">
+                  <div class="timeline-head">
+                    <span class="role-title">Software Engineer (IC1)</span>
+                    <span class="card-meta">Sep 2022 — Mar 2023</span>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <ul>
+              <li>
+                Building and operating recommendation systems, ML execution
+                services, and LLM-powered products including the Udemy Learning
+                Assistant.
+              </li>
+              <li>
+                Kotlin for microservices; Python for backend services that power
+                the UI.
+              </li>
+              <li>
+                WebSocket-based, low-latency LLM conversation infrastructure
+                with real-time streaming — used for experiences such as the Role
+                Play curriculum item for learners.
+              </li>
+              <li>
+                Supporting partner teams integrating services; contributing to
+                course-taking UI in React.
+              </li>
+              <li>
+                Kafka, DynamoDB, Redis, MySQL, Django REST Framework, Spring
+                Boot, Airflow, GitHub Actions, and related tooling.
+              </li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h3 class="card-title">
+                <a
+                  href="https://www.jotform.com/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Jotform</a
+                >
+              </h3>
+              <span class="card-meta">Sep 2021 — Jun 2022</span>
+            </div>
+
+            <ul class="company-timeline" aria-label="Roles at Jotform">
+              <li>
+                <span class="timeline-axis" aria-hidden="true"></span>
+                <div class="timeline-body">
+                  <div class="timeline-head">
+                    <span class="role-title"
+                      >Software Engineer (part-time)</span
+                    >
+                    <span class="card-meta">Nov 2021 — Jun 2022</span>
+                  </div>
+                  <p class="timeline-location">İzmir, Turkey</p>
+                  <ul>
+                    <li>
+                      Helped consolidate multiple repositories into a monorepo
+                      and streamline day-to-day development.
+                    </li>
+                    <li>
+                      Standardized repository layout for easier navigation and
+                      maintenance.
+                    </li>
+                    <li>
+                      Evolved testing infrastructure and sped up frontend build
+                      pipelines.
+                    </li>
+                    <li>
+                      Lerna, Nx, React (Enzyme, React Testing Library), PHP
+                      Symfony.
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li>
+                <span class="timeline-axis" aria-hidden="true"></span>
+                <div class="timeline-body">
+                  <div class="timeline-head">
+                    <span class="role-title">DevOps Intern</span>
+                    <span class="card-meta">Sep 2021 — Oct 2021</span>
+                  </div>
+                  <p class="timeline-location">İstanbul, Turkey</p>
+                  <ul>
+                    <li>Server provisioning with Ansible and Vagrant.</li>
+                    <li>CI/CD maintenance with Jenkins.</li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <h3 class="card-title">
+                <a
+                  href="https://kartaca.com/en/"
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  >Kartaca</a
+                >
+                — Software Developer Intern
+              </h3>
+              <span class="card-meta">Jul 2021 — Sep 2021</span>
+            </div>
+            <p class="card-location">İstanbul, Turkey</p>
+            <ul>
+              <li>
+                Magento modules for customization and new product behavior.
+              </li>
+              <li>React proof-of-concepts wired to existing backend APIs.</li>
+              <li>Drupal modules tailored to project needs.</li>
+              <li>Hazelcast POCs with performance analysis in Java and Go.</li>
+            </ul>
+          </article>
+        </section>
+
+        <section aria-labelledby="education-heading">
+          <h2 id="education-heading">Education</h2>
+          <article class="card edu-main">
+            <h3 class="card-title">Ege University</h3>
+            <p class="edu-detail">
+              BEng, Computer Engineering · GPA 3.85 (ranked 2nd in class)
+            </p>
+            <p class="card-meta edu-years">2017 — 2022</p>
+            <p class="card-location edu-location-tight">İzmir, Turkey</p>
+          </article>
+        </section>
+
+        <section aria-labelledby="badges-cert-heading">
+          <h2 id="badges-cert-heading">Badges &amp; certificates</h2>
+          <div class="card">
+            <p class="edu-detail badge-lead">
+              <a
+                href="https://www.cloudskillsboost.google/"
+                rel="noopener noreferrer"
+                target="_blank"
+                >Google Cloud</a
+              >
+              — infrastructure, application development, BigQuery, AI/ML.
+            </p>
+          </div>
+          <article class="card">
+            <h3 class="card-title">Certificates &amp; programs</h3>
+            <ul>
+              <li>Fullstack Bootcamp — TDD, CDC, Go &amp; Vue</li>
+              <li>
+                Server-side Development with Node.js, Express and MongoDB
+              </li>
+              <li>Functions, Methods, and Interfaces in Go</li>
+              <li>Concurrency in Go</li>
+              <li>
+                MS Learn Student Ambassador — Introduction to Cloud with Azure
+              </li>
+              <li>
+                MS Learn Student Ambassador — Developer Environment with WSL +
+                VS Code
+              </li>
+              <li>Getting Started with Go</li>
+              <li>Software Architecture</li>
+              <li>Programming with Google Go</li>
+            </ul>
+          </article>
+        </section>
+
+        <section aria-labelledby="languages-heading">
+          <h2 id="languages-heading">Languages</h2>
+          <div class="card">
+            <div class="lang-list">
+              <span>Turkish — Native</span>
+              <span>English</span>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>
+          © <span id="y"></span> Fatih Cüre · Static site —
+          <a
+            href="https://github.com/curefatih/curefatih.github.io"
+            rel="noopener noreferrer"
+            target="_blank"
+            >source</a
           >
         </p>
-      </li>
-      <li>
-        <h3>Shouldn't this page be serious?</h3>
-        <p>I tried it doesn't work</p>
-      </li>
-    </ul>
+      </footer>
+    </div>
 
-    <hr />
-    Thank you for your time. Here for you 🍬💐
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
