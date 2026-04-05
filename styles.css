@@ -26,6 +26,11 @@ html {
   html {
     scroll-behavior: auto;
   }
+
+  .project-row:hover,
+  .project-row:focus-visible {
+    transform: none;
+  }
 }
 
 body {
@@ -146,6 +151,98 @@ section h2 {
 .summary strong {
   color: var(--text);
   font-weight: 600;
+}
+
+.projects-intro {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 60ch;
+  margin-bottom: 1.1rem;
+  line-height: 1.55;
+}
+
+.project-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.project-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 1rem;
+  background: var(--bg-panel);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.25s ease, transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.project-row:hover,
+.project-row:focus-visible {
+  border-color: rgba(61, 214, 198, 0.35);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.22);
+  transform: translateY(-1px);
+  outline: none;
+}
+
+.project-row-icon-wrap {
+  flex-shrink: 0;
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25),
+    0 0 0 1px rgba(139, 156, 179, 0.15);
+}
+
+.project-row-icon-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-row-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.project-row-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.project-row-sub {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.35;
+}
+
+.project-row-chevron {
+  flex-shrink: 0;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid var(--text-muted);
+  border-bottom: 2px solid var(--text-muted);
+  transform: rotate(-45deg);
+  margin-right: 0.25rem;
+  opacity: 0.65;
+}
+
+.project-row:hover .project-row-chevron,
+.project-row:focus-visible .project-row-chevron {
+  border-color: var(--accent);
+  opacity: 1;
 }
 
 .card {
