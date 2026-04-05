@@ -170,7 +170,7 @@ section h2 {
   gap: 1rem;
 }
 
-.project-list > li {
+.project-list>li {
   margin: 0;
 }
 
@@ -323,7 +323,7 @@ section h2 {
 }
 
 /* One company, multiple roles: vertical timeline */
-.card > ul.company-timeline {
+.card>ul.company-timeline {
   list-style: none;
   padding-left: 0;
 }
@@ -334,25 +334,25 @@ section h2 {
   padding: 0;
 }
 
-.card ul.company-timeline > li {
+.card ul.company-timeline>li {
   list-style: none;
   margin-bottom: 0;
 }
 
-.card > .company-timeline:not(:last-child) {
+.card>.company-timeline:not(:last-child) {
   margin-bottom: 1rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--border);
 }
 
-.company-timeline > li {
+.company-timeline>li {
   display: grid;
   grid-template-columns: 16px 1fr;
   column-gap: 0.85rem;
   align-items: stretch;
 }
 
-.company-timeline > li:not(:last-child) {
+.company-timeline>li:not(:last-child) {
   --timeline-item-gap: 1.15rem;
   padding-bottom: var(--timeline-item-gap);
 }
@@ -377,7 +377,7 @@ section h2 {
 }
 
 /* Line runs from below this dot through item padding into the next row’s dot */
-.company-timeline > li:not(:last-child) .timeline-axis::after {
+.company-timeline>li:not(:last-child) .timeline-axis::after {
   content: "";
   position: absolute;
   left: 6px;
@@ -408,18 +408,18 @@ section h2 {
   margin: 0.35rem 0 0.5rem;
 }
 
-.timeline-body > ul {
+.timeline-body>ul {
   margin: 0.15rem 0 0;
   padding-left: 1.15rem;
   list-style: disc;
   color: var(--text-muted);
 }
 
-.timeline-body > ul li {
+.timeline-body>ul li {
   margin-bottom: 0.45rem;
 }
 
-.timeline-body > ul li:last-child {
+.timeline-body>ul li:last-child {
   margin-bottom: 0;
 }
 
