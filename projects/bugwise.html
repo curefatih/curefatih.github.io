@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Bugwise — embeddable feedback and bug reporting SaaS with AI clustering, integrations, and subscription billing."
+    />
+    <meta name="theme-color" content="#0a0e14" />
+    <title>Bugwise · Project · Fatih Cüre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="../view-transitions.css" />
+    <link rel="stylesheet" href="projects.css" />
+  </head>
+  <body class="project-appstore">
+    <nav class="project-topnav" aria-label="Project">
+      <a class="project-back" href="../index.html#projects">
+        <span class="project-back-icon" aria-hidden="true">‹</span>
+        Fatih Cüre
+      </a>
+    </nav>
+
+    <article class="project-shell">
+      <header class="project-hero">
+        <div class="project-icon-wrap">
+          <img
+            class="project-zoom-trigger"
+            src="../assets/bugwise/icon.png"
+            width="118"
+            height="118"
+            alt="Bugwise — feedback widget"
+            data-caption="Bugwise — feedback widget"
+            tabindex="0"
+          />
+        </div>
+        <div class="project-hero-copy">
+          <h1 class="project-title">Bugwise</h1>
+          <p class="project-subtitle">
+            Collect structured feedback and bug reports from any website, cluster
+            similar signals with AI, and route work to the tools your team
+            already uses.
+          </p>
+          <div class="project-badges">
+            <span class="project-badge">SaaS</span>
+            <span class="project-badge">Embeddable widget</span>
+            <span class="project-badge">AI clustering</span>
+          </div>
+          <div class="project-cta-row">
+            <p class="project-cta-note">
+              No longer live — archived SaaS with widget, dashboard, and
+              integrations.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <section class="project-section" aria-labelledby="preview-heading">
+        <h2 id="preview-heading" class="project-section-title">Preview</h2>
+        <p class="project-lead">
+          Widget embed, dashboard flows, and product walkthrough captured in
+          demo footage.
+        </p>
+        <ul class="project-scroller" data-project-gallery>
+          <li class="project-shot">
+            <figure>
+              <div class="project-device">
+                <button
+                  type="button"
+                  class="project-gallery-item project-gallery-item--video"
+                  data-gallery-type="video"
+                  data-gallery-src="../assets/bugwise/demo.mp4"
+                  data-gallery-poster="../assets/bugwise/poster.png"
+                  data-gallery-caption="Bugwise product demo"
+                  aria-label="Open video: Bugwise product demo"
+                >
+                  <img
+                    class="project-gallery-poster-img"
+                    src="../assets/bugwise/poster.png"
+                    width="1600"
+                    height="900"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-gallery-play" aria-hidden="true"></span>
+                </button>
+              </div>
+              <figcaption class="project-shot-caption">
+                Product demo
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+
+      <section class="project-section" aria-labelledby="about-heading">
+        <h2 id="about-heading" class="project-section-title">About this project</h2>
+        <div class="project-body">
+          <p>
+            Bugwise was a plug-and-play
+            <strong>feedback and bug reporting platform</strong> that teams
+            embedded on their sites with a single script. The product is no
+            longer live; the demo and notes here reflect it as shipped. Visitors submit structured
+            reports through a lightweight widget — with optional screenshots and
+            screen recordings scoped to the active domain — while product teams
+            triage everything from a React dashboard.
+          </p>
+          <p>
+            Similar submissions are grouped with
+            <strong>OpenAI embeddings</strong> stored in PostgreSQL via
+            pgvector, so recurring pain points surface as clusters instead of
+            noise. Configurable alert thresholds notify teams by email when
+            volume spikes. Integrations push approved items into
+            <strong>GitHub issues</strong> and <strong>Trello cards</strong>,
+            closing the loop between user signal and delivery work.
+          </p>
+          <p>
+            The stack is an Nx monorepo on the frontend (React, Vite, shadcn/ui,
+            JSONForms builder) with a Go Fiber API, Redis-backed rate limiting,
+            JWT auth, and Stripe subscriptions for tiered usage limits.
+          </p>
+        </div>
+
+        <div class="project-features">
+          <div class="project-feature">
+            <h3>Embeddable widget</h3>
+            <p>
+              One-line script embed with custom positioning, theming, URL rules,
+              and programmatic open/close via <code>window.Bugwise</code>.
+            </p>
+          </div>
+          <div class="project-feature">
+            <h3>Visual form builder</h3>
+            <p>
+              Drag-and-drop feedback forms powered by JSONForms — text fields,
+              dropdowns, checkboxes, and capture types tuned per project.
+            </p>
+          </div>
+          <div class="project-feature">
+            <h3>AI clustering &amp; alerts</h3>
+            <p>
+              Semantic grouping of similar feedback with threshold-based email
+              alerts when clusters grow fast enough to need attention.
+            </p>
+          </div>
+          <div class="project-feature">
+            <h3>Integrations &amp; billing</h3>
+            <p>
+              GitHub and Trello connectors, Stripe checkout and webhooks, and
+              subscription tiers with usage limits and custom branding on paid
+              plans.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-info-card" aria-label="Project information">
+          <div class="project-info-row">
+            <span class="project-info-label">Type</span>
+            <span class="project-info-value">SaaS / platform</span>
+          </div>
+          <div class="project-info-row">
+            <span class="project-info-label">Focus</span>
+            <span class="project-info-value"
+              >Feedback, AI, integrations, billing</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <footer class="project-footer">
+        <p>
+          © <span id="y"></span> Fatih Cüre ·
+          <a
+            href="https://github.com/curefatih/curefatih.github.io"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Source</a
+          >
+        </p>
+      </footer>
+    </article>
+
+    <div
+      id="project-lightbox"
+      class="project-lightbox"
+      hidden
+      aria-hidden="true"
+    >
+      <div
+        class="project-lightbox-backdrop"
+        data-lightbox-close
+        aria-hidden="true"
+      ></div>
+      <div
+        class="project-lightbox-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="lightbox-heading"
+        aria-describedby="lightbox-caption"
+      >
+        <h2 id="lightbox-heading" class="visually-hidden">Media preview</h2>
+        <div class="project-lightbox-chrome">
+          <div
+            class="project-lightbox-toolbar"
+            role="toolbar"
+            aria-label="Zoom"
+            data-lightbox-zoom-toolbar
+          >
+            <button
+              type="button"
+              class="project-lightbox-tool"
+              data-zoom-out
+              aria-label="Zoom out"
+            >
+              −
+            </button>
+            <span class="project-lightbox-zoom-pct" aria-live="polite"
+              >100%</span
+            >
+            <button
+              type="button"
+              class="project-lightbox-tool"
+              data-zoom-in
+              aria-label="Zoom in"
+            >
+              +
+            </button>
+            <button
+              type="button"
+              class="project-lightbox-tool project-lightbox-tool-wide"
+              data-zoom-reset
+              aria-label="Reset zoom and position"
+            >
+              Reset
+            </button>
+          </div>
+          <button
+            type="button"
+            class="project-lightbox-close"
+            data-lightbox-close
+            aria-label="Close preview"
+          >
+            ×
+          </button>
+        </div>
+        <div class="project-lightbox-viewport">
+          <button
+            type="button"
+            class="project-lightbox-fab project-lightbox-fab-prev"
+            data-gallery-prev
+            aria-label="Previous item"
+            hidden
+          >
+            ‹
+          </button>
+          <div
+            class="project-lightbox-stage"
+            data-lightbox-stage
+            aria-label="Preview"
+          >
+            <div class="project-lightbox-pan" data-lightbox-pan>
+              <img
+                class="project-lightbox-img"
+                data-lightbox-img
+                alt=""
+                draggable="false"
+              />
+              <video
+                class="project-lightbox-video"
+                data-lightbox-video
+                controls
+                playsinline
+                preload="metadata"
+                hidden
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="project-lightbox-fab project-lightbox-fab-next"
+            data-gallery-next
+            aria-label="Next item"
+            hidden
+          >
+            ›
+          </button>
+        </div>
+        <p
+          class="project-lightbox-counter"
+          data-lightbox-counter
+          aria-live="polite"
+          hidden
+        ></p>
+        <p id="lightbox-caption" class="project-lightbox-caption"></p>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+    <script src="project-lightbox.js" defer></script>
+  </body>
+</html>
