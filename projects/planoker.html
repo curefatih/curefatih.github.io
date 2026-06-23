@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Planoker — archived real-time online planning poker for agile teams, with Jira Chrome extension integration."
+    />
+    <meta name="theme-color" content="#0a0e14" />
+    <title>Planoker · Project · Fatih Cüre</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../reset.css" />
+    <link rel="stylesheet" href="../view-transitions.css" />
+    <link rel="stylesheet" href="projects.css" />
+  </head>
+  <body class="project-appstore">
+    <nav class="project-topnav" aria-label="Project">
+      <a class="project-back" href="../index.html#projects">
+        <span class="project-back-icon" aria-hidden="true">‹</span>
+        Fatih Cüre
+      </a>
+    </nav>
+
+    <article class="project-shell">
+      <header class="project-hero">
+        <div class="project-icon-wrap">
+          <img
+            class="project-zoom-trigger"
+            src="../assets/planoker/icon.png"
+            width="118"
+            height="118"
+            alt="Planoker — planning poker"
+            data-caption="Planoker — planning poker"
+            tabindex="0"
+          />
+        </div>
+        <div class="project-hero-copy">
+          <h1 class="project-title">Planoker</h1>
+          <p class="project-subtitle">
+            Real-time online planning poker for agile teams. Create a room,
+            estimate backlog items together, and jump in from Jira with one
+            click.
+          </p>
+          <div class="project-badges">
+            <span class="project-badge">Agile</span>
+            <span class="project-badge">Real-time</span>
+            <span class="project-badge">Jira extension</span>
+          </div>
+          <div class="project-cta-row">
+            <p class="project-cta-note">
+              No longer live — archived planning poker app with Jira Chrome
+              extension.
+            </p>
+          </div>
+        </div>
+      </header>
+
+      <section class="project-section" aria-labelledby="preview-heading">
+        <h2 id="preview-heading" class="project-section-title">Preview</h2>
+        <p class="project-lead">
+          Room creation, voting flows, and product walkthrough captured in demo
+          footage.
+        </p>
+        <ul class="project-scroller" data-project-gallery>
+          <li class="project-shot">
+            <figure>
+              <div class="project-device">
+                <button
+                  type="button"
+                  class="project-gallery-item project-gallery-item--video"
+                  data-gallery-type="video"
+                  data-gallery-src="../assets/planoker/demo.mp4"
+                  data-gallery-poster="../assets/planoker/poster.png"
+                  data-gallery-caption="Planoker product demo"
+                  aria-label="Open video: Planoker product demo"
+                >
+                  <img
+                    class="project-gallery-poster-img"
+                    src="../assets/planoker/poster.png"
+                    width="2542"
+                    height="1826"
+                    alt=""
+                    loading="lazy"
+                    decoding="async"
+                  />
+                  <span class="project-gallery-play" aria-hidden="true"></span>
+                </button>
+              </div>
+              <figcaption class="project-shot-caption">
+                Product demo
+              </figcaption>
+            </figure>
+          </li>
+        </ul>
+      </section>
+
+      <section class="project-section" aria-labelledby="about-heading">
+        <h2 id="about-heading" class="project-section-title">About this project</h2>
+        <div class="project-body">
+          <p>
+            Planoker was a lightweight
+            <strong>online planning poker</strong> tool built for sprint
+            planning and backlog estimation. The product is no longer live; the
+            demo and notes here reflect it as shipped. Teams created a private
+            room, loaded story or task IDs, and voted on story points in sync —
+            no installs or accounts required to get started.
+          </p>
+          <p>
+            Rooms were powered by <strong>Socket.io</strong> with state stored
+            in <strong>Redis</strong>, so votes, reveals, and task transitions
+            propagated instantly to every participant. Facilitators could manage
+            the backlog, reveal votes, mark tasks done, and share invite links
+            so remote teammates joined the same session in seconds.
+          </p>
+          <p>
+            A <strong>Chrome extension</strong> injected an “Open in Planoker”
+            action into Jira boards, pre-filling room name and task IDs from
+            the current sprint backlog so planning sessions started without
+            manual copy-paste.
+          </p>
+        </div>
+
+        <div class="project-features">
+          <div class="project-feature">
+            <h3>Real-time rooms</h3>
+            <p>
+              Socket.io rooms with Redis-backed state, automatic expiry, and
+              synchronized vote reveals across all connected clients.
+            </p>
+          </div>
+          <div class="project-feature">
+            <h3>Planning poker UI</h3>
+            <p>
+              Fibonacci-style card decks, seat layout, countdown timers, and
+              facilitator controls for advancing through the backlog.
+            </p>
+          </div>
+          <div class="project-feature">
+            <h3>Jira integration</h3>
+            <p>
+              Chrome extension adds one-click room creation from Atlassian Jira
+              backlogs with sprint name and task IDs passed via URL params.
+            </p>
+          </div>
+          <div class="project-feature">
+            <h3>Modern frontend</h3>
+            <p>
+              React, TypeScript, Vite, Tailwind CSS, and shadcn/ui components
+              with Formik validation and responsive layouts.
+            </p>
+          </div>
+        </div>
+
+        <div class="project-info-card" aria-label="Project information">
+          <div class="project-info-row">
+            <span class="project-info-label">Type</span>
+            <span class="project-info-value">Web app / tool</span>
+          </div>
+          <div class="project-info-row">
+            <span class="project-info-label">Focus</span>
+            <span class="project-info-value"
+              >Agile estimation, real-time sync, Jira</span
+            >
+          </div>
+        </div>
+      </section>
+
+      <footer class="project-footer">
+        <p>
+          © <span id="y"></span> Fatih Cüre ·
+          <a
+            href="https://github.com/curefatih/curefatih.github.io"
+            rel="noopener noreferrer"
+            target="_blank"
+            >Source</a
+          >
+        </p>
+      </footer>
+    </article>
+
+    <div
+      id="project-lightbox"
+      class="project-lightbox"
+      hidden
+      aria-hidden="true"
+    >
+      <div
+        class="project-lightbox-backdrop"
+        data-lightbox-close
+        aria-hidden="true"
+      ></div>
+      <div
+        class="project-lightbox-dialog"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="lightbox-heading"
+        aria-describedby="lightbox-caption"
+      >
+        <h2 id="lightbox-heading" class="visually-hidden">Media preview</h2>
+        <div class="project-lightbox-chrome">
+          <div
+            class="project-lightbox-toolbar"
+            role="toolbar"
+            aria-label="Zoom"
+            data-lightbox-zoom-toolbar
+          >
+            <button
+              type="button"
+              class="project-lightbox-tool"
+              data-zoom-out
+              aria-label="Zoom out"
+            >
+              −
+            </button>
+            <span class="project-lightbox-zoom-pct" aria-live="polite"
+              >100%</span
+            >
+            <button
+              type="button"
+              class="project-lightbox-tool"
+              data-zoom-in
+              aria-label="Zoom in"
+            >
+              +
+            </button>
+            <button
+              type="button"
+              class="project-lightbox-tool project-lightbox-tool-wide"
+              data-zoom-reset
+              aria-label="Reset zoom and position"
+            >
+              Reset
+            </button>
+          </div>
+          <button
+            type="button"
+            class="project-lightbox-close"
+            data-lightbox-close
+            aria-label="Close preview"
+          >
+            ×
+          </button>
+        </div>
+        <div class="project-lightbox-viewport">
+          <button
+            type="button"
+            class="project-lightbox-fab project-lightbox-fab-prev"
+            data-gallery-prev
+            aria-label="Previous item"
+            hidden
+          >
+            ‹
+          </button>
+          <div
+            class="project-lightbox-stage"
+            data-lightbox-stage
+            aria-label="Preview"
+          >
+            <div class="project-lightbox-pan" data-lightbox-pan>
+              <img
+                class="project-lightbox-img"
+                data-lightbox-img
+                alt=""
+                draggable="false"
+              />
+              <video
+                class="project-lightbox-video"
+                data-lightbox-video
+                controls
+                playsinline
+                preload="metadata"
+                hidden
+              >
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <button
+            type="button"
+            class="project-lightbox-fab project-lightbox-fab-next"
+            data-gallery-next
+            aria-label="Next item"
+            hidden
+          >
+            ›
+          </button>
+        </div>
+        <p
+          class="project-lightbox-counter"
+          data-lightbox-counter
+          aria-live="polite"
+          hidden
+        ></p>
+        <p id="lightbox-caption" class="project-lightbox-caption"></p>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("y").textContent = new Date().getFullYear();
+    </script>
+    <script src="project-lightbox.js" defer></script>
+  </body>
+</html>

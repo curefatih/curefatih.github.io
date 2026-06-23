@@ -170,7 +170,35 @@ body.project-appstore {
 }
 
 .project-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
   margin-top: 1rem;
+}
+
+.project-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--bg);
+  background: var(--accent);
+  padding: 0.55rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+.project-cta:hover,
+.project-cta:focus-visible {
+  opacity: 0.9;
+}
+
+.project-cta-secondary {
+  color: var(--accent);
+  background: var(--accent-dim);
+  border: 1px solid color-mix(in srgb, var(--accent) 28%, transparent);
 }
 
 .project-cta-note {
